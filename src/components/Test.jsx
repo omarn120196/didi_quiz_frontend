@@ -28,7 +28,7 @@ const Test = () => {
     // *Variable para visualizar retroalimentación
     const [retroalimentacion, setRetroalimentacion] = useState(false);
 
-    // *Estado donde se guardan los puntos
+    // *Estado donde se guardan los puntos obtenidos
     const [puntos, setPuntos] = useState(0);
 
     // *Variable que indica si una pregunta no es contestada
@@ -182,7 +182,7 @@ const Test = () => {
 
             
             await clienteAxios.post('/test', datos);
-            
+
         } catch (error) {
             console.log(error.response.data.msg);
         }
