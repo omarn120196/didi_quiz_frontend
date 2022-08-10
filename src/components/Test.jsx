@@ -1,5 +1,5 @@
 import { useState } from "react";
-import clienteAxios from "../config/Axios";
+import clienteAxios from "../config/axios";
 import Mensaje from "./Mensaje";
 import Retroalimentacion from "./Retroalimentacion";
 import Pregunta from "./Pregunta";
@@ -180,7 +180,6 @@ const Test = () => {
                 tipo: infoAsignada.tipo
             }
 
-            
             await clienteAxios.post('/test', datos);
 
         } catch (error) {
