@@ -67,6 +67,7 @@ h2{
 
 .entrada-A h1{
 	color: #636569;
+	text-transform: uppercase;
 }
 
 .didi{
@@ -167,16 +168,19 @@ h2{
 .encabezado{
 	width: 60%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	flex-direction: column-reverse;
 	margin-bottom: 20px;
+}
+
+.encabezado h2{
+	margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
 	.encabezado{
 		width: 80%;
-		justify-content: center;
-		flex-wrap: wrap;
 	}
 }
 
@@ -265,6 +269,7 @@ h2{
 
 .cont-respuestas{
 	margin-bottom: 10px;
+	display: flex;
 }
 
 input[type="submit"]{
@@ -293,6 +298,10 @@ input[type="text"]{
 
 input[type="submit"]:hover{
 	background: rgb(252, 96, 23);
+}
+
+label{
+	display: block;
 }
 
 

@@ -1,6 +1,38 @@
+import { useState, useEffect } from 'react';
+
+import analitico from '../img/Análitico.png';
+import practico from '../img/Práctico.png';
+import tranquilo from '../img/Tranquilo.png';
+import social from '../img/Social.png';
+
 const Retroalimentacion = ({retroUsuario, puntos}) => {
 
     const {tipo, mensaje, rasgos} = retroUsuario;
+
+    const [imagen, setImagen] = useState('');
+
+    useEffect(()=>{
+        const seleccionarImagen = ()=>{
+            switch(tipo){
+                case 'Análitico':
+                    setImagen(analitico);
+                    break;
+                case 'Práctico':
+                    setImagen(practico);
+                    break;
+                case 'Tranquilo':
+                    setImagen(tranquilo);
+                    break;
+                case 'Social':
+                    setImagen(social);
+                    break;
+                default: 
+                    break;
+            }
+        }
+
+        seleccionarImagen();
+    }, []);
 
     return (
         <div className="cont retroalimentacion">
@@ -15,7 +47,7 @@ const Retroalimentacion = ({retroUsuario, puntos}) => {
                 </div>
             </div>
             <figure className="imagen-retro">
-                <img src={`./src/img/${tipo}.png`} alt="tipo" />
+                <img src={imagen} alt="tipo" />
             </figure>
         </div>
     )

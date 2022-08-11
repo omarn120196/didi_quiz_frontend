@@ -21,8 +21,8 @@ const Entrada = () => {
                 <div className="barra"></div>
                 <div className="titulos">
                     <h1 className="frase1">Bussiness</h1>
-                    <h1 className="frase2">School</h1>
-                    <h1 className="frase3">Didi</h1>
+                    <h1 className="frase2">Development</h1>
+                    <h1 className="frase3">School</h1>
                 </div>
             </div>
         </section>

@@ -208,7 +208,7 @@ const Test = () => {
                     (
                         <>
                             <div className="encabezado">
-                                <h2>Tipos de usuario</h2>
+                                <h2>Tipos de cliente</h2>
                                 <img src={logo} alt="logo" />
                             </div>
                             <div className="cont contenedor">
