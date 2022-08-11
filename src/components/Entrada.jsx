@@ -20,7 +20,7 @@ const Entrada = () => {
                 </figure>
                 <div className="barra"></div>
                 <div className="titulos">
-                    <h1 className="frase1">Bussiness</h1>
+                    <h1 className="frase1">Business</h1>
                     <h1 className="frase2">Development</h1>
                     <h1 className="frase3">School</h1>
                 </div>
