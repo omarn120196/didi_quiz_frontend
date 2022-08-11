@@ -253,11 +253,11 @@ const Test = () => {
                         </div>
                         
                         <div className="res-texto">
-                            <label htmlFor="id">Id de Empleado:</label>
+                            <label htmlFor="id">Generación:</label>
                             <input 
                                 id="id"
                                 type="text"
-                                placeholder="Ingresa tu id"
+                                placeholder="Ingresa tu generación"
                                 onChange={e=>setId(e.target.value)} 
                             />
                         </div>
