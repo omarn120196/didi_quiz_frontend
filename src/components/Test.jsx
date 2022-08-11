@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import clienteAxios from "../config/axios";
 import Mensaje from "./Mensaje";
 import Retroalimentacion from "./Retroalimentacion";
 import Pregunta from "./Pregunta";
 import preguntas from "../data/preguntas";
 import rangos from "../data/rangos";
+import logo from '../img/logo.png';
 
 const Test = () => {
+
+    // *Animar entrada
+    const [entrada, setEntrada] = useState(false);
 
     // *Guardar nombre y id de empleado
     const [nombre, setNombre] = useState('');
@@ -36,6 +40,11 @@ const Test = () => {
     
     // *Objeto para visualizar retroalimentacion del usuario
     const [retroUsuario, setRetroUsuario] = useState({});
+
+    // *Cambiar estado para animación entrada
+    useEffect(()=>{
+        setEntrada(true);
+    }, []);
     
     // *Función que asigna el valor del input checked
     const handleCheck = e=>{
@@ -193,9 +202,30 @@ const Test = () => {
     }
 
     return (
-        <div className="cont-encuesta">
+        <div className={`cont-encuesta ${entrada && 'ver-encuesta'}`}>
             <div className="header">
-                {!retroalimentacion ? <h2>Encuesta</h2> : <h2>Resultado</h2>}
+                {!retroalimentacion ? 
+                    (
+                        <>
+                            <div className="encabezado">
+                                <h2>Tipos de usuario</h2>
+                                <img src={logo} alt="logo" />
+                            </div>
+                            <div className="cont contenedor">
+                                <p>Instruciones: <span>A continuación leerás una serie de situaciones, elige la respuesta que describa lo que harías. </span></p>
+                            </div>
+                        </>
+                    ) 
+                    
+                    :
+                    
+                    <>
+                        <div className="encabezado">
+                            <h2>Resultado</h2>
+                            <img src={logo} alt="logo" />
+                        </div>
+                    </>
+                }
             </div>
 
             {retroalimentacion ? 

@@ -1,10 +1,19 @@
-import styled from "@emotion/styled";
-import logoDidi from "../img/didi.png";
+import { useState, useEffect } from "react";
+import logoDidi from "../img/bds.png";
 
 const Entrada = () => {
 
+    const [salida, setSalida] = useState(false);
+
+    // *Al instanciar el componente despueste de 7s opacity a 0
+    useEffect(()=>{
+        setTimeout(()=>{
+            setSalida(true);
+        }, 7000);
+    }, []);
+
     return (
-        <section className="inicio">
+        <section className={`inicio ${salida && 'salida'}`}>
             <div className="entrada-A">
                 <figure className="didi">
                     <img className="img-didi" src={logoDidi} alt=""/>

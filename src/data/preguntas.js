@@ -16,7 +16,7 @@ const preguntas = [
         noPregunta: '2'
     },
     {
-        pregunta: 'Al llamar a ATC por un cobro erróneo en tu factura, tu...',
+        pregunta: 'Al llamar a ATC por un cobro erróneo en tu factura, tú...',
         insisoA: 'Le indico a quien me atiende el detalle de mi factura y porque considero que hubo un cobro erróneo.',
         insisoB: 'Le digo que no importa porque me cobraron mal, pero que quiero que me lo devuelvan.',
         insisoC: 'Le digo que me parece que me han cobrado mal, y que por favor me ayude a validar.',
@@ -32,7 +32,7 @@ const preguntas = [
         noPregunta: '4'
     },
     {
-        pregunta: 'Cuando hay una discusión entre varios compañeros de trabajo en la oficina, ¿Cómo reacciono?',
+        pregunta: 'Cuando hay una discusión entre varios compañeros de trabajo en la oficina, ¿cómo reacciono?',
         insisoA: 'Antes de participar trato de escuchar el punto de vista de todos, analizo la situación completa.',
         insisoB: 'Pregunto cuál es el problema directo y planteo una alternativa de solución sencilla.',
         insisoC: 'Trato de no participar, finalmente son problemas de otros y no quiero ganarme problemas ajenos.',
@@ -40,15 +40,15 @@ const preguntas = [
         noPregunta: '5'
     },
     {
-        pregunta: 'Al finalizar una competencia, ¿Qué frase es la que más te identifica?',
+        pregunta: 'Al finalizar una competencia, ¿qué frase es la que más te identifica?',
         insisoA: 'Si aprendí algo, definitivamente sirvió.',
         insisoB: 'Lo que importa es el resultado final, si no se gana no sirve.',
-        insisoC: 'No competimos con los demás, competimos contra nosotros mismos',
+        insisoC: 'No competimos con los demás, competimos contra nosotros mismos.',
         insisoD: 'Lo que importa es la experiencia y como nos enriquece.',
         noPregunta: '6'
     },
     {
-        pregunta: 'Te abordan en la calle para ofrecerte un producto, ¿Qué pensarías?',
+        pregunta: 'Te abordan en la calle para ofrecerte un producto, ¿qué pensarías?',
         insisoA: 'Analizaré el producto para ver si realmente lo necesito y si la oferta es buena lo adquiero.',
         insisoB: 'Sigo de frente, si necesito algo ya me acercaré yo a la tienda.',
         insisoC: 'Por educación escucharé al vendedor, pero le diré que debo consultarlo.',
@@ -74,7 +74,7 @@ const preguntas = [
     {
         pregunta: 'Lo que más me molesta en una conversación:',
         insisoA: 'Que me respondan con dudas o titubeando.',
-        insisoB: 'Que me interrumpan antes de terminar de explicar mi idea',
+        insisoB: 'Que me interrumpan antes de terminar de explicar mi idea.',
         insisoC: 'Que me respondan sin explicar a detalle la situación.',
         insisoD: 'Que no le den importancia a mi punto de vista.',
         noPregunta: '10'

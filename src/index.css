@@ -1,33 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 *, *::after, *:hover{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html{
-  font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1{
-  font-size: 48px;
+	font-size: 48px;
 }
 
 @media screen and (max-width: 475px) {
-  h1{
-    font-size: 36px;
-  }
+	h1{
+		font-size: 36px;
+	}
 }
 
 h2{
-  font-size: 36px;
+	font-size: 36px;
 }
 
 .contenedor{
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
+	width: 90%;
+	max-width: 1240px;
+	margin: 0 auto;
 }
 
 /* *Animación de Entada */
@@ -36,10 +36,15 @@ h2{
 	width: 100%;
 	height: 100vh;
 	position: absolute;
-	background: white;
+	background-image: radial-gradient(circle, rgba(205,205,205,1) 25%, rgba(79,79,79,1) 100%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 1s ease-in-out;
+}
+
+.salida{
+	opacity: 0;
 }
 
 .entrada-A{
@@ -51,17 +56,17 @@ h2{
 }
 
 .barra{
-	width: 5px;
-	height: 200px;
-	background: #c0bbbb;
-	margin: 0 20px 0 60px;
+	width: 3px;
+	height: 160px;
+	background: #636569;
+	margin: 0 20px 0 40px;
 	opacity: 0;
 	transform: translateY(-300px);
 	animation: arriba 1s ease-in-out .5s 1 forwards;
 }
 
 .entrada-A h1{
-	color: #c0bbbb;
+	color: #636569;
 }
 
 .didi{
@@ -70,8 +75,24 @@ h2{
 }
 
 .didi img{
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 125px;
+}
+
+@media screen and (max-width: 768px) {
+	.didi img{
+		width: 160px;
+		height: 80px;
+	}
+
+	.barra{
+		height: 120px;
+		margin: 0 20px 0 20px;
+	}
+
+	.titulos h1{
+		font-size: 28px;
+	}
 }
 
 .frase1, .frase2{
@@ -131,7 +152,7 @@ h2{
 }
 
 .ocultarEntrada{
-  opacity: 0;
+	opacity: 0;
 }
 
 /* *Preguntas* */
@@ -139,23 +160,56 @@ h2{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.encabezado{
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.encabezado{
+		width: 80%;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 }
 
 .header h2{
 	color: white;
+	margin-bottom: 20px;
+}
+
+.header p{
+	font-weight: 700;
+}
+
+.header p span{
+	font-weight: 400;
 }
 
 .cont-encuesta{
 	width: 100%;
 	min-height: 100vh;
-	background: linear-gradient(90deg, rgba(255,125,65,1) 0%, rgba(255,117,53,1) 100%);
+	background: linear-gradient(90deg, rgba(255,184,28,1) 0%, rgba(255,125,65,1) 100%);
 	padding: 20px 0 40px 0;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+.ver-encuesta{
+	opacity: 1;
 }
 
 .cont{
 	width: 60%;
 	padding: 20px;
-	margin: 40px auto;
+	margin: 0 auto 40px auto;
 	background: white;
 	border-radius: 10px;
 	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
@@ -223,6 +277,10 @@ input[type="submit"]{
 	transition: all .3s ease;
 }
 
+input[type="radio"]{
+	margin-right: 10px;
+}
+
 input[type="text"]{
 	width: 100%;
 	margin: 10px 0;
@@ -237,6 +295,7 @@ input[type="submit"]:hover{
 	background: rgb(252, 96, 23);
 }
 
+
 .error{
 	padding: 20px;
 	background: rgb(129, 19, 19);
@@ -244,4 +303,33 @@ input[type="submit"]:hover{
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 40px;
+}
+
+.retroalimentacion{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.imagen-retro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imagen-retro img{
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	.encabezado img {
+		width: 80%;
+	}
+	.retroalimentacion{
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.imagen-retro{
+		grid-row: 1/2;
+	}
 }
