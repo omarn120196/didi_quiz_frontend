@@ -1,6 +1,6 @@
 const rangos = [
     {
-        tipo: 'Análitico',
+        tipo: 'Analítico',
         mensaje: 'Eres una persona orientada a los detalles, la precisión y la puntualidad.',
         rasgos: [
             'Escéptico y detallista',
