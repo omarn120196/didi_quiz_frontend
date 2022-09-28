@@ -43,7 +43,16 @@ const Retroalimentacion = ({retroUsuario, puntos}) => {
                 </div>
                 <div className="mensaje">
                     <p>{mensaje}</p>
-                    <p>{rasgos}</p>
+                    <p>Tus rasgos potenciales son:</p>
+                    <ul className='rasgos'>
+                        {rasgos.map(rasgo => (
+                            <li
+                                key={rasgo}
+                            >
+                                {rasgo}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
             <figure className="imagen-retro">

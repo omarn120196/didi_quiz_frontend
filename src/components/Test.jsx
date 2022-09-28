@@ -181,19 +181,19 @@ const Test = () => {
         }
 
         // *Guardar Datos en la base
-        try {
-            const datos = {
-                empleado: nombre,
-                idEmpleado: id,
-                puntos: totalPuntos,
-                tipo: infoAsignada.tipo
-            }
+        // try {
+        //     const datos = {
+        //         empleado: nombre,
+        //         idEmpleado: id,
+        //         puntos: totalPuntos,
+        //         tipo: infoAsignada.tipo
+        //     }
 
-            await clienteAxios.post('/test', datos);
+        //     await clienteAxios.post('/test', datos);
 
-        } catch (error) {
-            console.log(error.response.data.msg);
-        }
+        // } catch (error) {
+        //     console.log(error.response.data.msg);
+        // }
 
         // *Visualizar RetroALimentación
         setRetroalimentacion(true);
@@ -212,7 +212,7 @@ const Test = () => {
                                 <img src={logo} alt="logo" />
                             </div>
                             <div className="cont contenedor">
-                                <p>Instruciones: <span>A continuación leerás una serie de situaciones, elige la respuesta que describa lo que harías. </span></p>
+                                <p>Instrucciones: <span>A continuación leerás una serie de situaciones, elige la respuesta que describa lo que harías. </span></p>
                             </div>
                         </>
                     ) 

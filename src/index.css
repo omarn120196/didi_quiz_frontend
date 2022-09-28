@@ -234,6 +234,19 @@ h2{
 
 .mensaje p{
 	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.rasgos{
+	padding: 20px;
+	column-count: 2;
+	column-gap: 30px;
+	list-style-position: outside;
+}
+
+.rasgos li{
+	font-size: 18px;
+	margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
