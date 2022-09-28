@@ -14,7 +14,7 @@ const Retroalimentacion = ({retroUsuario, puntos}) => {
     useEffect(()=>{
         const seleccionarImagen = ()=>{
             switch(tipo){
-                case 'Análitico':
+                case 'Analítico':
                     setImagen(analitico);
                     break;
                 case 'Práctico':
